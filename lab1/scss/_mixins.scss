@@ -1,0 +1,33 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-elevated {
+  background-color: $color-surface;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin interactive-lift {
+  transition:
+    transform $transition-smooth,
+    box-shadow $transition-smooth;
+}

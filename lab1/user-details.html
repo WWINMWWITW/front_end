@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>profile — loom commerce</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-shell">
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a class="page-header__brand" href="index.html">loom commerce</a>
+      <nav class="page-header__nav" aria-label="top navigation">
+        <a class="page-header__link" href="index.html">home</a>
+        <a class="page-header__link" href="catalog.html">catalog</a>
+        <a class="page-header__link page-header__link--active" href="users.html">team</a>
+        <a class="page-header__link" href="ui-components.html">ui kit</a>
+        <a class="page-header__link" href="profile1.html">my profile</a>
+      </nav>
+      <div class="page-header__actions">
+        <a class="page-header__link" href="login.html">login</a>
+        <a class="btn btn--ghost btn--sm" href="login.html">logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-body">
+    <aside class="page-sidebar" aria-label="sidebar">
+      <p class="page-sidebar__label">workspace</p>
+      <nav class="page-sidebar__nav" aria-label="sidebar navigation">
+        <a class="page-sidebar__link" href="index.html">overview</a>
+        <a class="page-sidebar__link" href="catalog.html">products</a>
+        <a class="page-sidebar__link" href="users.html">people</a>
+        <a class="page-sidebar__link page-sidebar__link--active" href="user-details.html">profile sample</a>
+        <a class="page-sidebar__link" href="ui-components.html">dialogs</a>
+      </nav>
+    </aside>
+
+    <main class="page-main">
+      <div class="page-main__inner">
+        <!-- profile summary -->
+        <section class="profile-card" aria-labelledby="profile-name">
+          <div class="profile-card__header">
+            <img class="profile-card__avatar" src="https://placehold.co/200x200/eef2ff/312e81?text=AD" alt="avatar placeholder for amélie dupont">
+            <div class="profile-card__titles">
+              <h1 class="profile-card__name" id="profile-name">amélie dupont</h1>
+              <div class="profile-card__role-row">
+                <span class="badge badge--admin">admin</span>
+                <span class="meta-inline">joined 14 feb 2025</span>
+              </div>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--ghost btn--sm" href="users.html">back to list</a>
+              <button class="btn btn--primary btn--sm" type="button">edit</button>
+              <button class="btn btn--danger btn--sm" type="button">delete</button>
+            </div>
+          </div>
+
+          <!-- detail fields -->
+          <dl class="profile-card__dl">
+            <dt class="profile-card__dt">email</dt>
+            <dd class="profile-card__dd">amelie@loom.dev</dd>
+            <dt class="profile-card__dt">phone</dt>
+            <dd class="profile-card__dd">+33 6 12 34 56 78</dd>
+            <dt class="profile-card__dt">timezone</dt>
+            <dd class="profile-card__dd">europe / paris</dd>
+            <dt class="profile-card__dt">department</dt>
+            <dd class="profile-card__dd">merchandising &amp; ops</dd>
+            <dt class="profile-card__dt">notes</dt>
+            <dd class="profile-card__dd">owns catalog approvals and supplier onboarding checklist.</dd>
+          </dl>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <p>lab 1 — static profile detail · no javascript</p>
+  </footer>
+</body>
+</html>

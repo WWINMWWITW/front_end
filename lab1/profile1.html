@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile | Loom Commerce</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-shell">
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a class="page-header__brand" href="index.html">loom commerce</a>
+      <nav class="page-header__nav" aria-label="top navigation">
+        <a class="page-header__link" href="index.html">home</a>
+        <a class="page-header__link" href="catalog.html">catalog</a>
+        <a class="page-header__link" href="users.html">team</a>
+        <a class="page-header__link" href="ui-components.html">ui kit</a>
+        <a class="page-header__link page-header__link--active" href="profile1.html">my profile</a>
+      </nav>
+      <div class="page-header__actions">
+        <a class="page-header__link" href="login.html">login</a>
+        <a class="btn btn--ghost btn--sm" href="login.html">logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-body">
+    <aside class="page-sidebar" aria-label="sidebar">
+      <p class="page-sidebar__label">workspace</p>
+      <nav class="page-sidebar__nav" aria-label="sidebar navigation">
+        <a class="page-sidebar__link" href="index.html">overview</a>
+        <a class="page-sidebar__link" href="catalog.html">products</a>
+        <a class="page-sidebar__link" href="users.html">people</a>
+        <a class="page-sidebar__link page-sidebar__link--active" href="profile1.html">my profile</a>
+        <a class="page-sidebar__link" href="ui-components.html">dialogs</a>
+      </nav>
+    </aside>
+
+    <main class="page-main">
+      <div class="page-main__inner">
+        <section aria-labelledby="profile-heading">
+          <h1 class="page-title" id="profile-heading">my profile</h1>
+          <p class="page-muted">Manage your personal information, view order history, and update preferences.</p>
+        </section>
+
+        <div class="promo-row">
+          <article class="promo-card">
+            <p class="promo-card__eyebrow">activity</p>
+            <h2 class="promo-card__title">12 orders</h2>
+            <p class="promo-card__text">Lifetime purchases</p>
+          </article>
+          <article class="promo-card">
+            <p class="promo-card__eyebrow">loyalty</p>
+            <h2 class="promo-card__title">€946 spent</h2>
+            <p class="promo-card__text">Total account value</p>
+          </article>
+          <article class="promo-card">
+            <p class="promo-card__eyebrow">wishlist</p>
+            <h2 class="promo-card__title">3 items</h2>
+            <p class="promo-card__text">Saved for later</p>
+          </article>
+        </div>
+
+        <div class="ui-stack">
+          <section class="profile-card" aria-label="personal information">
+            <div class="profile-card__header">
+              <div class="profile-card__avatar" style="background-color: #eef2ff; display: flex; align-items: center; justify-content: center; color: #4f46e5; font-size: 1.5rem; font-weight: 800;">
+                OL
+              </div>
+              <div class="profile-card__titles">
+                <h2 class="profile-card__name">Olena Lysenko</h2>
+                <div class="profile-card__role-row">
+                  <span class="badge badge--regular">regular user</span>
+                  <span class="meta-inline">o.lysenko@example.com</span>
+                </div>
+              </div>
+              <div class="btn-row">
+                <button class="btn btn--ghost btn--sm" type="button">change photo</button>
+              </div>
+            </div>
+            <dl class="profile-card__dl">
+              <dt class="profile-card__dt">full name</dt>
+              <dd class="profile-card__dd">Olena Lysenko</dd>
+              <dt class="profile-card__dt">phone</dt>
+              <dd class="profile-card__dd">+38 067 123 4567</dd>
+              <dt class="profile-card__dt">member since</dt>
+              <dd class="profile-card__dd">March 2024</dd>
+              <dt class="profile-card__dt">shipping address</dt>
+              <dd class="profile-card__dd">Kyiv, Khreshchatyk St, 22</dd>
+            </dl>
+          </section>
+
+          <section class="ui-showcase" aria-labelledby="edit-profile-label">
+            <p class="ui-showcase__label" id="edit-profile-label">edit profile settings</p>
+            <form action="#" method="get">
+              <div class="form-field">
+                <label class="form-field__label" for="edit-name">full name</label>
+                <input class="form-input" id="edit-name" name="name" type="text" value="Olena Lysenko">
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="edit-email">email address</label>
+                <input class="form-input form-input--error" id="edit-email" name="email" type="email" value="o.lysenko@example">
+                <p class="form-error">Please enter a valid email address.</p>
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="edit-phone">phone number</label>
+                <input class="form-input" id="edit-phone" name="phone" type="tel" value="+38 067 123 4567">
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="edit-pass">new password</label>
+                <input class="form-input" id="edit-pass" name="password" type="password" placeholder="Leave blank to keep current">
+              </div>
+              <div class="btn-row" style="margin-top: 1.5rem;">
+                <button class="btn btn--primary" type="button">save changes</button>
+                <button class="btn btn--ghost" type="reset">cancel</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="ui-showcase" aria-labelledby="orders-label">
+            <p class="ui-showcase__label" id="orders-label">recent orders</p>
+            <div class="data-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">order #</th>
+                    <th scope="col">date</th>
+                    <th scope="col">item</th>
+                    <th scope="col">total</th>
+                    <th scope="col">status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="data-table__link" href="#">4821</a></td>
+                    <td>14 May 2025</td>
+                    <td>Indigo linen shirt</td>
+                    <td><strong>€84.00</strong></td>
+                    <td><span class="badge badge--admin">delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td><a class="data-table__link" href="#">4715</a></td>
+                    <td>02 Apr 2025</td>
+                    <td>Sea glass vase</td>
+                    <td><strong>€46.50</strong></td>
+                    <td><span class="badge badge--admin">delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td><a class="data-table__link" href="#">4603</a></td>
+                    <td>18 Mar 2025</td>
+                    <td>Merino throw</td>
+                    <td><strong>€120.00</strong></td>
+                    <td><span class="badge badge--regular">processing</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="ui-showcase" aria-labelledby="danger-label" style="border-color: rgba(220, 38, 38, 0.3); background-color: #fef2f2;">
+            <p class="ui-showcase__label" id="danger-label" style="color: #dc2626;">danger zone</p>
+            <p class="page-muted" style="color: #991b1b;">Permanently delete your account and all associated data. This action cannot be undone.</p>
+            <button class="btn btn--danger" type="button">delete account</button>
+          </section>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <p>&copy; 2026 Loom Commerce. All rights reserved.</p>
+  </footer>
+</body>
+</html>
