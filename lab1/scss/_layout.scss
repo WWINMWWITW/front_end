@@ -1,0 +1,231 @@
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: $header-height;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.page-header__inner {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+}
+
+.page-header__brand {
+  @extend %link-inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: $color-text;
+  transition: color $transition-fast;
+}
+
+.page-header__brand:hover {
+  color: $color-primary;
+}
+
+.page-header__brand:active {
+  color: $color-primary-hover;
+}
+
+.page-header__nav {
+  @extend %list-reset;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.page-header__link {
+  @extend %link-inherit;
+  padding: 0.45rem 0.75rem;
+  border-radius: $radius-sm;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-text-muted;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast,
+    transform $transition-fast;
+}
+
+.page-header__link:hover {
+  background-color: $color-primary-soft;
+  color: $color-primary;
+}
+
+.page-header__link:active {
+  transform: scale(0.97);
+}
+
+.page-header__link--active {
+  background-color: $color-primary;
+  color: $color-surface;
+}
+
+.page-header__link--active:hover {
+  background-color: $color-primary-hover;
+  color: $color-surface;
+}
+
+.page-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.page-sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background-color: $color-surface;
+  border-right: 1px solid $color-border;
+  padding: 1.25rem 0;
+}
+
+.page-sidebar__label {
+  margin: 0 1rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.page-sidebar__nav {
+  @extend %list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 0.65rem;
+}
+
+.page-sidebar__link {
+  @extend %link-inherit;
+  display: block;
+  padding: 0.65rem 0.85rem;
+  border-radius: $radius-sm;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: $color-text-muted;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast,
+    transform $transition-fast;
+}
+
+.page-sidebar__link:hover {
+  background-color: $color-primary-soft;
+  color: $color-primary;
+}
+
+.page-sidebar__link:active {
+  transform: translateX(4px);
+}
+
+.page-sidebar__link--active {
+  background: linear-gradient(90deg, $color-primary-soft, transparent);
+  color: $color-primary;
+  border-left: 3px solid $color-primary;
+  padding-left: calc(0.85rem - 3px);
+}
+
+.page-main {
+  flex: 1;
+  padding: 1.75rem 1.5rem 2.5rem;
+  min-width: 0;
+}
+
+.page-main__inner {
+  @include container;
+}
+
+.page-footer {
+  margin-top: auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $color-text-muted;
+  border-top: 1px solid $color-border;
+  background-color: $color-surface;
+}
+
+.page-shell--simple > .page-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 960px) {
+  .page-body {
+    flex-direction: column;
+  }
+
+  .page-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid $color-border;
+    padding: 0.75rem 0;
+  }
+
+  .page-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .page-sidebar__link--active {
+    border-left: 0;
+    border-bottom: 3px solid $color-primary;
+    padding-left: 0.85rem;
+    padding-bottom: calc(0.65rem - 3px);
+  }
+}
+
+@media (max-width: 720px) {
+  .page-header__inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .page-header {
+    height: auto;
+  }
+
+  .page-header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.page-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

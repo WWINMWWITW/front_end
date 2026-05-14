@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI Kit | Loom Commerce</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="page-shell">
+  <div class="toast-stack" aria-live="polite">
+    <div class="toast toast--error">sync failed: unable to reach payment sandbox.</div>
+    <div class="toast">draft saved automatically at 09:42.</div>
+    <div class="toast toast--success">inventory import completed with 0 errors.</div>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a class="page-header__brand" href="index.html">loom commerce</a>
+      <nav class="page-header__nav" aria-label="top navigation">
+        <a class="page-header__link" href="index.html">home</a>
+        <a class="page-header__link" href="catalog.html">catalog</a>
+        <a class="page-header__link" href="users.html">team</a>
+        <a class="page-header__link page-header__link--active" href="ui-components.html">ui kit</a>
+        <a class="page-header__link" href="profile1.html">my profile</a>
+      </nav>
+      <div class="page-header__actions">
+        <a class="page-header__link" href="login.html">login</a>
+        <a class="btn btn--ghost btn--sm" href="login.html">logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-body">
+    <aside class="page-sidebar" aria-label="sidebar">
+      <p class="page-sidebar__label">workspace</p>
+      <nav class="page-sidebar__nav" aria-label="sidebar navigation">
+        <a class="page-sidebar__link" href="index.html">overview</a>
+        <a class="page-sidebar__link" href="catalog.html">products</a>
+        <a class="page-sidebar__link" href="users.html">people</a>
+        <a class="page-sidebar__link" href="user-details.html">profile sample</a>
+        <a class="page-sidebar__link page-sidebar__link--active" href="ui-components.html">dialogs</a>
+      </nav>
+    </aside>
+
+    <main class="page-main">
+      <div class="page-main__inner">
+        <section aria-labelledby="ui-heading">
+          <h1 class="page-title" id="ui-heading">ui components</h1>
+          <p class="page-muted">Design system documentation. Reusable interface components, modals, and notifications rendered for frontend reference.</p>
+        </section>
+
+        <div class="ui-stack">
+          <section class="ui-showcase" aria-labelledby="create-label">
+            <p class="ui-showcase__label" id="create-label">create user modal</p>
+            <div class="modal-static" role="presentation">
+              <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="create-title">
+                <h2 class="modal-panel__title" id="create-title">create teammate</h2>
+                <form action="#" method="get">
+                  <div class="form-field">
+                    <label class="form-field__label" for="cu-user">username</label>
+                    <input class="form-input" id="cu-user" name="cu_user" type="text" value="nadia.ops">
+                  </div>
+                  <div class="form-field">
+                    <label class="form-field__label" for="cu-pass">password</label>
+                    <input class="form-input" id="cu-pass" name="cu_pass" type="password" value="••••••••">
+                  </div>
+                  <div class="form-field">
+                    <label class="form-field__label" for="cu-pass2">confirm password</label>
+                    <input class="form-input" id="cu-pass2" name="cu_pass2" type="password" value="••••••••">
+                  </div>
+                  <div class="form-field">
+                    <label class="form-field__label" for="cu-role">role</label>
+                    <select class="form-input" id="cu-role" name="cu_role">
+                      <option value="admin">admin</option>
+                      <option value="regular" selected>regular</option>
+                    </select>
+                  </div>
+                  <div class="modal-panel__footer">
+                    <button class="btn btn--ghost" type="button">cancel</button>
+                    <button class="btn btn--primary" type="submit">ok</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="ui-showcase" aria-labelledby="edit-label">
+            <p class="ui-showcase__label" id="edit-label">edit user modal</p>
+            <div class="modal-static" role="presentation">
+              <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="edit-title">
+                <h2 class="modal-panel__title" id="edit-title">edit marco ibarra</h2>
+                <form action="#" method="get">
+                  <div class="form-field">
+                    <label class="form-field__label" for="eu-email">email</label>
+                    <input class="form-input" id="eu-email" name="eu_email" type="email" value="marco@loom.dev">
+                  </div>
+                  <div class="form-field">
+                    <label class="form-field__label" for="eu-role">role</label>
+                    <select class="form-input" id="eu-role" name="eu_role">
+                      <option value="admin">admin</option>
+                      <option value="regular" selected>regular</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-field__label" for="eu-phone">phone</label>
+                    <input class="form-input" id="eu-phone" name="eu_phone" type="tel" value="+34 600 000 000">
+                  </div>
+                  <div class="modal-panel__footer">
+                    <button class="btn btn--ghost" type="button">cancel</button>
+                    <button class="btn btn--primary" type="submit">save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section class="ui-showcase" aria-labelledby="delete-label">
+            <p class="ui-showcase__label" id="delete-label">delete user confirmation</p>
+            <div class="modal-static" role="presentation">
+              <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+                <h2 class="modal-panel__title" id="delete-title">remove teammate?</h2>
+                <p class="page-muted">this will revoke access for <strong>yuki tanaka</strong> and archive activity logs after 30 days.</p>
+                <div class="modal-panel__footer">
+                  <button class="btn btn--ghost" type="button">cancel</button>
+                  <button class="btn btn--danger" type="button">delete user</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <p>&copy; 2026 Loom Commerce. All rights reserved.</p>
+  </footer>
+</body>
+</html>
